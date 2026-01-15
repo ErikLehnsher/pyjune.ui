@@ -1,0 +1,24 @@
+@use '../abstracts/variables';
+
+.btn {
+    padding: variables.$sp-2 variables.$sp-4;
+    border-radius: variables.$radius-md;
+    border: none;
+    cursor: pointer;
+    font-size: variables.$fs-sm;
+    transition: 0.2s;
+
+    &--primary {
+        background: variables.$primary;
+        color: variables.$white;
+
+        &:hover {
+            background: variables.$primary-hover;
+        }
+    }
+
+    &--danger {
+        background: variables.$danger;
+        color: variables.$white;
+    }
+}

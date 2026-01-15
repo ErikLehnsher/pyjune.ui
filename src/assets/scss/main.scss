@@ -1,0 +1,24 @@
+@use 'abstracts/variables' ;
+@use 'abstracts/mixins';
+
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/utilities';
+
+@use 'components/button';
+@use 'components/navbar';
+@use 'components/card';
+
+@use 'layout/main';
+
+@use 'components/post-card';
+@use 'pages/post-editor';
+@use 'pages/post-detail';
+@use 'pages/post';
+@use 'pages/auth';
+
+// global  styles
+
+// body {
+//     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+// }

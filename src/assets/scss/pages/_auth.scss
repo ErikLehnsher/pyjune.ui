@@ -1,0 +1,118 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* AUTH PAGE */
+.auth-page {
+    min-block-size: 100vh;
+    background: variables.$gray-50;
+    @include mixins.flex(stretch, stretch);
+}
+
+/* LEFT */
+.auth-left {
+    flex: 1;
+    @include mixins.flex(center, center);
+    padding: variables.$sp-6;
+}
+
+/* FORM */
+.auth-form {
+    inline-size: 100%;
+    max-inline-size: 380px;
+    padding: variables.$sp-6;
+
+    h2 {
+        font-size: variables.$fs-xl;
+        text-align: center;
+        margin-block-end: variables.$sp-5;
+        color: variables.$gray-800;
+    }
+}
+
+/* INPUT */
+.auth-input {
+    inline-size: 100%;
+    padding: variables.$sp-3 variables.$sp-4;
+    font-size: variables.$fs-sm;
+    background: none;
+    border: none;
+    border-radius: variables.$radius-md;
+    margin-block-end: variables.$sp-3;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: variables.$gray-500;
+        font-weight: 400;
+    }
+}
+
+/* BUTTON */
+.auth-button {
+    margin-block-start: variables.$sp-4;
+    padding: variables.$sp-3;
+    font-size: variables.$fs-sm;
+    font-weight: 600;
+    background: variables.$odoo-purple;
+    border: none;
+    border-radius: 30px;
+    color: variables.$white;
+    cursor: pointer;
+    transition: background .2s ease, transform .1s ease;
+
+    &:hover {
+        background: variables.$primary-hover;
+    }
+
+    &:active {
+        transform: scale(.98);
+    }
+}
+
+/* TEXT */
+.auth-text {
+    display: block;
+    margin-block-start: variables.$sp-4;
+    font-size: variables.$fs-xs;
+    font-weight: 600;
+    color: variables.$gray-400;
+}
+
+/* RIGHT */
+.auth-right {
+    inline-size: 420px;
+    background: #000;
+    @include mixins.flex(center, center);
+}
+
+/* VIDEO */
+.video-frame {
+    inline-size: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+
+    video {
+        inline-size: 100%;
+        block-size: 100%;
+        object-fit: cover;
+    }
+}
+
+/* MOBILE */
+@include mixins.responsive(md) {
+    .auth-right {
+        display: none;
+    }
+
+    .auth-left {
+        padding: variables.$sp-4;
+    }
+
+    .auth-form {
+        padding: variables.$sp-5;
+    }
+}

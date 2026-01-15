@@ -1,0 +1,7 @@
+@use '../abstracts/variables';
+
+.main {
+    max-inline-size: 1200px;
+    margin: variables.$sp-6 auto;
+    padding: 0 variables.$sp-4;
+}

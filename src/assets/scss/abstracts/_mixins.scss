@@ -1,0 +1,21 @@
+@mixin flex($align: center, $justify: center, $gap: 0) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-inline-size: 640px) { @content; }
+  }
+  @if $breakpoint == md {
+    @media (max-inline-size: 768px) { @content; }
+  }
+}

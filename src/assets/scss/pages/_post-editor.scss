@@ -1,0 +1,133 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* ========================
+  PAGE
+======================== */
+.post-edit {
+  background: #f6f6f3;
+  min-block-size: 100vh;
+  padding: 60px 0;
+}
+
+/* ========================
+  WRAPPER
+======================== */
+.editor-wrapper {
+  max-inline-size: 760px;
+  margin: 0 auto;
+  background: white;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .05);
+}
+
+/* ========================
+  TITLE
+======================== */
+.title-input {
+  inline-size: 100%;
+  font-size: 36px;
+  font-weight: 800;
+  border: none;
+  outline: none;
+  border: none;  
+  outline: none;      
+  box-shadow: none;   
+  line-height: None;
+  resize: none;        
+  overflow: hidden;  
+}
+
+.excerpt-input {
+  inline-size: 70%;
+  block-size: 100%;
+  font-size: 18px;
+  font-weight: 300;
+  margin-block-end: 32px;
+  font-style: italic;
+  
+  border: none;  
+  outline: none;      
+  box-shadow: none;   
+
+  resize: none;        
+  overflow: hidden;   
+}
+
+/* ========================
+  TIPTAP
+======================== */
+.editor :deep(.ProseMirror) {
+  outline: none;
+  min-block-size: 400px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.editor :deep(.ProseMirror:focus) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ========================
+  PLUS DROPDOWN
+======================== */
+.plus-dropdown {
+  position: fixed;
+  background: white;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+  z-index: 9999;
+}
+
+.plus-dropdown button {
+  display: block;
+  inline-size: 100%;
+  padding: 8px 14px;
+  border: none;
+  background: none;
+  text-align: start;
+  cursor: pointer;
+}
+
+.plus-dropdown button:hover {
+  background: #f1f1f1;
+}
+
+.plus-btn {
+  position: fixed;
+  inline-size: 28px;
+  block-size: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #9c0000;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* ========================
+  IMAGE INSIDE EDITOR
+======================== */
+.editor :deep(img) {
+  max-inline-size: 100%;
+  block-size: auto;
+  display: block;
+  margin: 16px auto;
+  border-radius: 12px;
+}
+
+/* ========================
+  ACTIONS
+======================== */
+.actions {
+  margin-block-start: 32px;
+}
+.action-button{
+  border:None;
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: 600;
+  padding-inline-end:15px ;
+}

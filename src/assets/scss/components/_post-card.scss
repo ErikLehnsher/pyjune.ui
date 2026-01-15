@@ -1,0 +1,33 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.post-card {
+    background: variables.$white;
+    border: 1px solid variables.$gray-200;
+    border-radius: variables.$radius-md;
+    padding: variables.$sp-4;
+    margin-block-end: variables.$sp-4;
+
+    &__title {
+        color: variables.$odoo-purple;
+        font-size: variables.$fs-xs;
+        margin-block-end: variables.$sp-2;
+    }
+
+    &__meta {
+        @include mixins.flex(center, flex-start, variables.$sp-3);
+        font-size: variables.$fs-xs;
+        color: variables.$gray-500;
+    }
+
+    &__excerpt {
+        margin: variables.$sp-3 0;
+        color: variables.$gray-700;
+        line-height: 1.5;
+    }
+
+    &__tags {
+        display: flex;
+        gap: variables.$sp-2;
+    }
+}
