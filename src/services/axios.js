@@ -51,12 +51,16 @@ api.interceptors.response.use(
     console.error('HEADERS:', error.response?.headers)
     console.groupEnd()
 
-    if (error.response?.status === 401) {
-      localStorage.removeItem('access_token')
-      localStorage.removeItem('refresh_token')
-      console.log('🔑 TOKEN FROM LS:', token)
-      console.warn('⚠️ Unauthorized - token cleared')
-    }
+  if (error.response?.status === 401) {
+    const token = localStorage.getItem('access_token')
+    console.log('🔑 TOKEN FROM LS (before clear):', token)
+
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('refresh_token')
+
+    console.warn('⚠️ Unauthorized - token cleared')
+}
+
 
     return Promise.reject(error)
   }
