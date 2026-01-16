@@ -2,7 +2,7 @@
 import { useAuthStore } from '@/store/auth'
 import { useRouter } from 'vue-router'
 import { ref, computed } from 'vue'
-import postService from '@/services/post.service'
+import postService from '@/services/post.service.js'
 const authStore = useAuthStore()
 const router = useRouter()
 

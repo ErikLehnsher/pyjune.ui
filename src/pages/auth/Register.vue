@@ -13,7 +13,7 @@ const form = reactive({
 })
 
 const submit = async () => {
-    if (form.password || !form.password2 || !form.display_name || !form.email) {
+    if (!form.password || !form.password2 || !form.display_name || !form.email) {
         alert('Please fill all fields')
         return
     }
